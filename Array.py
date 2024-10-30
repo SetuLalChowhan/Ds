@@ -33,6 +33,12 @@ class MyList:
         
         self.A[pos] =item
         self.n=self.n+1
+    
+    def delete(self,pos):
+        for i in range(pos,self.n-1):
+            self.A[i]=self.A[i+1]
+        
+        self.n=self.n-1
 
     def find(self,item):
         for i in range(self.n):
@@ -65,7 +71,10 @@ L.append(17)
 L.append(11)
 # L.clear()
 # L.pop()
+print(L)
+L.delete(1)
+print(L)
+# L.insert(2,20)
+# print(L)
 
-print(L)
-L.insert(2,20)
-print(L)
+
