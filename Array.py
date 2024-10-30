@@ -23,6 +23,16 @@ class MyList:
             self.__resize(self.size*2)
         self.A[self.n]=item
         self.n+=1
+    
+    def insert(self,pos,item):
+        if self.size ==self.n:
+            self.__resize(2*self.size)
+        
+        for i in range(self.n-1,pos-1,-1):
+            self.A[i+1] =self.A[i]
+        
+        self.A[pos] =item
+        self.n=self.n+1
 
     def find(self,item):
         for i in range(self.n):
@@ -48,18 +58,14 @@ class MyList:
        #reassign
        self.A=B
 
-# L=MyList()
-# L.append(12)
-# L.append(14)
-# L.append(17)
-# L.append(11)
+L=MyList()
+L.append(12)
+L.append(14)
+L.append(17)
+L.append(11)
 # L.clear()
 # L.pop()
-# print(L)
-# print(len(L))
-# print(len(L))
-# print(L.find(11))
-l1=[1,2,3,4,5,6]
-l1.insert(3,100)
-print(l1)
-print("Tuli")
+
+print(L)
+L.insert(2,20)
+print(L)
