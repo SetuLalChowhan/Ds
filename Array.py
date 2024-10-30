@@ -29,8 +29,7 @@ class MyList:
             if self.A[i] == item:
                 return i
         
-        return "Value Error"
-    
+        return "Value Error"  
     def pop(self):
         if self.n==0:
             return "empty list"
@@ -49,7 +48,6 @@ class MyList:
        #reassign
        self.A=B
 
- 
 # L=MyList()
 # L.append(12)
 # L.append(14)
@@ -61,7 +59,7 @@ class MyList:
 # print(len(L))
 # print(len(L))
 # print(L.find(11))
-
 l1=[1,2,3,4,5,6]
 l1.insert(3,100)
 print(l1)
+print("Tuli")
