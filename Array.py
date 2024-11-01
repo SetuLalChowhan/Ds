@@ -67,12 +67,6 @@
 # L.insert(2,20)
 # print(L)
 
-import calendar
-import datetime
-
-year= datetime.datetime.now().year
-
-print(calendar.calendar(year))
 
 
 
