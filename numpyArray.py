@@ -1,4 +1,4 @@
-import numpy as np  #nd array create
+# import numpy as np  #nd array create
 
 #create array
 # l1=[10,20,30,40,11,1,2,3,4]
