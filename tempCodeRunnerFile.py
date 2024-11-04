@@ -1,1 +1,1 @@
-print(x.transpose())
+[8,5,4],
