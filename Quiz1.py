@@ -62,46 +62,67 @@ import numpy as np
 
 #task 3
 
-def decrypt_matrix(matrix):
+# def decrypt_matrix(matrix):
 
-    rows = len(matrix)
-    cols = len(matrix[0])
+#     rows = len(matrix)
+#     cols = len(matrix[0])
 
-    # sumRow = np.zeros(rows,dtype=int)
+#     # sumRow = np.zeros(rows,dtype=int)
     
-    # for i in range(rows):
-    #     sum=0
-    #     for j in matrix[i]:
-    #         sum+=j
-    #     sumRow[i]=sum
+#     # for i in range(rows):
+#     #     sum=0
+#     #     for j in matrix[i]:
+#     #         sum+=j
+#     #     sumRow[i]=sum
     
-    # print(sumRow)
+#     # print(sumRow)
 
 
-    newCol = np.zeros(cols,dtype=int)
+#     newCol = np.zeros(cols,dtype=int)
     
-    for i in range(rows):
-        for j in range(cols):
-            newCol[j]+=matrix[i][j] //[1,0,0]
+#     for i in range(rows):
+#         for j in range(cols):
+#             newCol[j]+=matrix[i][j] //[1,0,0]
     
     
-    deff = np.array([0]*(cols-1),dtype=int)
+#     deff = np.array([0]*(cols-1),dtype=int)
    
 
-    for i in range(cols-1):
-        deff[i] =newCol[i+1]-newCol[i]
+#     for i in range(cols-1):
+#         deff[i] =newCol[i+1]-newCol[i]
     
 
-    return deff
-  #To Do
-matrix=np.array([[1,3,1],
-                 [6,4,2],
-                 [5,1,7],
-                 [9,3,3],
-                 [8,5,4],
-                 ])
+#     return deff
+#   #To Do
+# matrix=np.array([[1,3,1],
+#                  [6,4,2],
+#                  [5,1,7],
+#                  [9,3,3],
+#                  [8,5,4],
+#                  ])
 
-returned_array=decrypt_matrix(matrix)
-print(returned_array)
-#This should print [-13, 1]
+# returned_array=decrypt_matrix(matrix)
+# print(returned_array)
+# #This should print [-13, 1]
+
+
+# def countZero(matrix):
+#     rows = len(matrix)
+#     cols =len(matrix[0])
+#     count = 0 
+
+#     for i in matrix:
+#         for j in i:
+#             if j==0:
+#                 count+=1
+    
+#     return count
+
+# matrix=np.array([[2,0,1],
+#                  [0,4,2],
+#                  [5,1,7],
+#                  ])
+
+# returned_array=countZero(matrix)
+# print(returned_array)
 
