@@ -1,4 +1,4 @@
-# import numpy as np  #nd array create
+import numpy as np  #nd array create
 
 #create array
 # l1=[10,20,30,40,11,1,2,3,4]
@@ -22,7 +22,7 @@
 
 # print(array2.shape)
 
-# print(array1.size)
+print(array1.size)
 
 # print(array1.dtype)
 # print(array1.itemsize)
@@ -60,7 +60,7 @@
 # 7.Exponentiation(**)
 # 8.Transpose
 
-# x = np.array([[1,2],[3,4]])
+x = np.array([[1,2],[3,4]])
 # y = np.array([[11,12],[13,14]])
 
 # z= x+y
@@ -79,8 +79,9 @@
 # x =np.array([[12,11,15],[21,25,20],[18,27,16]])
 
 # y= np.sort(x)
-# y= np.sort(x,axis=1)
+# print(np.sort(x,axis=0))
 # y= np.sort(x,axis=0)
-# y = x.argsort(x,axis=1)
+# print(x.argsort(x,axis=1)) 
+
 # y = x.argsort(x,axis=0)
 # print(y)
