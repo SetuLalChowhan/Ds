@@ -17,92 +17,92 @@
 
 # print("None")
 
-class Node:
-    def __init__(self,data=None,next=None):
-        self.data=data
-        self.next=next
+# class Node:
+#     def __init__(self,data=None,next=None):
+#         self.data=data
+#         self.next=next
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
 
-    def insert_at_begining(self,data):
-        if self.head is None:
-            node =Node(data)
-            self.head=node
-        else:
-            node =Node(data)
-            node.next =self.head
-            self.head = node
-    def show(self):
-        current =self.head
-        while current:
-            print(current.data,end="-->")
-            current = current.next
+#     def insert_at_begining(self,data):
+#         if self.head is None:
+#             node =Node(data)
+#             self.head=node
+#         else:
+#             node =Node(data)
+#             node.next =self.head
+#             self.head = node
+#     def show(self):
+#         current =self.head
+#         while current:
+#             print(current.data,end="-->")
+#             current = current.next
         
-        print(None)
+#         print(None)
     
-    def get_length(self):
-        count = 0
-        current = self.head
-        while current:
-            count+=1
-            current = current.next
-        return count
+#     def get_length(self):
+#         count = 0
+#         current = self.head
+#         while current:
+#             count+=1
+#             current = current.next
+#         return count
     
-    def insert_at_end(self,data):
-        if self.head is None:
-            self.head =Node(data)
-            return
-        current = self.head
-        while current.next:
-            current = current.next      
-        current.next = Node(data)
+#     def insert_at_end(self,data):
+#         if self.head is None:
+#             self.head =Node(data)
+#             return
+#         current = self.head
+#         while current.next:
+#             current = current.next      
+#         current.next = Node(data)
     
-    def insert_at(self,index,data):
-        if index < 0 or index > self.get_length():
-            raise Exception("Invalid Index")
-        if index == 0:
-            self.insert_at_begining(data)
-            return
+#     def insert_at(self,index,data):
+#         if index < 0 or index > self.get_length():
+#             raise Exception("Invalid Index")
+#         if index == 0:
+#             self.insert_at_begining(data)
+#             return
         
-        current = self.head
-        count = 0
+#         current = self.head
+#         count = 0
 
-        while current:
-            if count == index-1:
-                node = Node(data,current.next)
-                current.next=node
-                break
+#         while current:
+#             if count == index-1:
+#                 node = Node(data,current.next)
+#                 current.next=node
+#                 break
             
-            current = current.next
-            count+=1
-    def remove_at(self,index):
-        if index < 0 or index > self.get_length():
-            raise Exception("Invalid Index")
-        if index == 0:
-            self.head =self.head.next
-            return
+#             current = current.next
+#             count+=1
+#     def remove_at(self,index):
+#         if index < 0 or index > self.get_length():
+#             raise Exception("Invalid Index")
+#         if index == 0:
+#             self.head =self.head.next
+#             return
         
-        current =self.head
-        count = 0
-        while current:
-            if count == index-1:
-                current.next = current.next.next
-                break
+#         current =self.head
+#         count = 0
+#         while current:
+#             if count == index-1:
+#                 current.next = current.next.next
+#                 break
                 
-            current=current.next
-            count+=1
+#             current=current.next
+#             count+=1
  
-linkA = LinkedList()
-linkA.insert_at_begining(5)
-linkA.insert_at_begining(6)
-linkA.insert_at_begining(7)
-linkA.insert_at_end(5)
-linkA.insert_at_end(6)
-linkA.insert_at_end(7)
-linkA.insert_at(2,12)
-linkA.remove_at(1)
+# linkA = LinkedList()
+# linkA.insert_at_begining(5)
+# linkA.insert_at_begining(6)
+# linkA.insert_at_begining(7)
+# linkA.insert_at_end(5)
+# linkA.insert_at_end(6)
+# linkA.insert_at_end(7)
+# linkA.insert_at(2,12)
+# linkA.remove_at(1)
 
 # linkA.show()
 # print(linkA.get_length())
