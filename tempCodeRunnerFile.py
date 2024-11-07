@@ -1,1 +1,1 @@
-y= np.sort(x,axis=0)
+singleL.show()
