@@ -177,8 +177,35 @@ import numpy as np
 # print_matrix(floor)
 # print('Walking Sequence:')
 # walk_zigzag(floor)
+#task 6
+# def print_matrix(matrix):
+#     print(matrix)
+# def compress_matrix(mat):
+#     rows = len(mat)
+#     cols = len(mat[0])
+#     compressed_rows = rows // 2
+#     compressed_cols = cols // 2
+#     compressed_mat = np.zeros((compressed_rows, compressed_cols), dtype=int)
+#     for i in range(0, rows, 2):
+#         for j in range(0, cols, 2):
+           
+#             block_sum = (mat[i][j] + mat[i+1][j] +
+#                          mat[i][j+1] + mat[i+1][j+1])
+           
+#             compressed_mat[i//2][j//2] = block_sum
+    
+#     return compressed_mat
 
 
+# matrix=np.array([[1,2,3,4],
+#                  [5,6,7,8],
+#                  [1,3,5,2],
+#                  [-2,0,6,-3]
+#                  ])
+# print_matrix(matrix)
+# print("...............")
+# returned_array=compress_matrix(matrix)
+# print_matrix(returned_array)
 
 
 
