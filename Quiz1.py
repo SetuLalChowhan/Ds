@@ -138,36 +138,36 @@ import numpy as np
 
 #Task 4
 
-def print_matrix(matrix):
-    print(matrix)
+# def print_matrix(matrix):
+#     print(matrix)
 
-def walk_zigzag(floor):
-    rows = len(floor)
-    cols =len(floor[0])
-    for col in range(cols):
-        if col % 2 == 0:  
-            for row in range(rows):
-                if(row%2==0):
-                    print(floor[row][col], end=" ")
-        else:  
-            for row in range(rows):
-                reverse_row = rows - 1 - row
-                if reverse_row % 2 != 0:
-                    print(floor[reverse_row][col], end=" ")
-        print()  
+# def walk_zigzag(floor):
+#     rows = len(floor)
+#     cols =len(floor[0])
+#     for col in range(cols):
+#         if col % 2 == 0:  
+#             for row in range(rows):
+#                 if(row%2==0):
+#                     print(floor[row][col], end=" ")
+#         else:  
+#             for row in range(rows):
+#                 reverse_row = rows - 1 - row
+#                 if reverse_row % 2 != 0:
+#                     print(floor[reverse_row][col], end=" ")
+#         print()  
 
-# Test case 1
-floor = np.array([['3', '8', '4', '6', '1'],
-                  ['7', '2', '1', '9', '3'],
-                  ['9', '0', '7', '5', '8'],
-                  ['2', '1', '3', '4', '0'],
-                  ['1', '4', '2', '8', '6']])
+# # Test case 1
+# floor = np.array([['3', '8', '4', '6', '1'],
+#                   ['7', '2', '1', '9', '3'],
+#                   ['9', '0', '7', '5', '8'],
+#                   ['2', '1', '3', '4', '0'],
+#                   ['1', '4', '2', '8', '6']])
 
-print_matrix(floor)
-print('Walking Sequence:')
-walk_zigzag(floor)
+# print_matrix(floor)
+# print('Walking Sequence:')
+# walk_zigzag(floor)
 
-print('################')
+# print('################')
 
 # Test case 2
 # floor = np.array([['3', '8', '4', '6', '1'],
@@ -178,7 +178,9 @@ print('################')
 # print_matrix(floor)
 # print('Walking Sequence:')
 # walk_zigzag(floor)
-#task 6
+
+
+#TASK 6
 # def print_matrix(matrix):
 #     print(matrix)
 # def compress_matrix(mat):
