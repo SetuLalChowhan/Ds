@@ -105,7 +105,7 @@ import numpy as np
 # print(returned_array)
 # #This should print [-13, 1]
 
-
+#Quiz Question answer
 # def countZero(matrix):
 #     rows = len(matrix)
 #     cols =len(matrix[0])
@@ -115,7 +115,7 @@ import numpy as np
 #     #     for j in i:
 #     #         if j==0:
 #     #             count+=1
-#                 #   break
+#     #             break
 
 #     #colume
 
@@ -125,15 +125,59 @@ import numpy as np
 #                 count+=1
 #                 break
     
-#     # return count
+#     return count
 
-# matrix=np.array([[2,0,0],
+# matrix=np.array([[2,0,1],
 #                  [0,4,2],
 #                  [5,1,7],
 #                  ])
 
 # returned_array=countZero(matrix)
 # print(returned_array)
+
+
+#Task 4
+
+# def print_matrix(matrix):
+#     print(matrix)
+
+# def walk_zigzag(floor):
+#     rows = len(floor)
+#     cols =len(floor[0])
+#     for col in range(cols):
+#         if col % 2 == 0:  
+#             for row in range(rows):
+#                 if(row%2==0):
+#                     print(floor[row][col], end=" ")
+#         else:  
+#             for row in range(rows - 1, -1, -1):
+#                 if(row%2!=0):
+#                     print(floor[row][col], end=" ")
+#         print()  
+
+# Test case 1
+# floor = np.array([['3', '8', '4', '6', '1'],
+#                   ['7', '2', '1', '9', '3'],
+#                   ['9', '0', '7', '5', '8'],
+#                   ['2', '1', '3', '4', '0'],
+#                   ['1', '4', '2', '8', '6']])
+
+# print_matrix(floor)
+# print('Walking Sequence:')
+# walk_zigzag(floor)
+
+# print('################')
+
+# Test case 2
+# floor = np.array([['3', '8', '4', '6', '1'],
+#                   ['7', '2', '1', '9', '3'],
+#                   ['9', '0', '7', '5', '8'],
+#                   ['2', '1', '3', '4', '0']])
+
+# print_matrix(floor)
+# print('Walking Sequence:')
+# walk_zigzag(floor)
+
 
 
 
