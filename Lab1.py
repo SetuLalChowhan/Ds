@@ -151,6 +151,56 @@ import numpy as np
 # print('Walking Sequence:')
 # walk_zigzag(floor)
 
+#TAKS 5
+
+# def print_matrix(matrix):
+#     print(matrix)
+   
+
+# def row_rotation(exam_week, seat_status):
+#     rows = len(seat_status)
+#     cols = len(seat_status[0])
+#     rotated_seat_status = [[None for _ in range(cols)] for _ in range(rows)]  
+
+#     for i in range(rows):
+#         for j in range(cols):
+#             rotated_seat_status[i][j] = seat_status[i][j]
+#     shift = (exam_week - 1) % rows  
+
+
+#     for _ in range(shift):
+
+#         last_row = rotated_seat_status[rows - 1]  
+#         for i in range(rows - 1, 0, -1):
+#             rotated_seat_status[i] = rotated_seat_status[i - 1] 
+#         rotated_seat_status[0] = last_row  
+
+#     print("Seat status after rotation:")
+#     print_matrix(rotated_seat_status)
+
+#     for i in range(rows):
+#         if 'AA' in rotated_seat_status[i]:
+#             return i + 1 
+
+
+# seat_status = [
+#     ['A', 'B', 'C', 'D', 'E'],
+#     ['F', 'G', 'H', 'I', 'J'],
+#     ['K', 'L', 'M', 'N', 'O'],
+#     ['P', 'Q', 'R', 'S', 'T'],
+#     ['U', 'V', 'W', 'X', 'Y'],
+#     ['Z', 'AA', 'BB', 'CC', 'DD']
+# ]
+
+# exam_week = 3
+# print("Original seat status:")
+# print_matrix(seat_status)
+# print()
+
+# row_number = row_rotation(exam_week, seat_status)
+# print(f'Your friend AA will be on row {row_number}')
+
+
 
 #TASK 6
 
