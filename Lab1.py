@@ -64,48 +64,38 @@ import numpy as np
 
 #TASK 3
 
-# def decrypt_matrix(matrix):
+def decrypt_matrix(matrix):
 
-#     rows = len(matrix)
-#     cols = len(matrix[0])
+    rows = len(matrix)
+    
+    cols = len(matrix[0])
 
-#     # sumRow = np.zeros(rows,dtype=int)
+    newCol = np.zeros(cols,dtype=int)
     
-#     # for i in range(rows):
-#     #     sum=0
-#     #     for j in matrix[i]:
-#     #         sum+=j
-#     #     sumRow[i]=sum
-    
-#     # print(sumRow)
-
-
-#     newCol = np.zeros(cols,dtype=int)
-    
-#     for i in range(rows):
-#         for j in range(cols):
-#             newCol[j]+=matrix[i][j] //[1,0,0]
+    for i in range(rows):
+        for j in range(cols):
+            newCol[j]+=matrix[i][j] 
     
     
-#     deff = np.array([0]*(cols-1),dtype=int)
+    deff = np.zeros(cols-1,dtype=int)
    
 
-#     for i in range(cols-1):
-#         deff[i] =newCol[i+1]-newCol[i]
+    for i in range(cols-1):
+        deff[i] =newCol[i+1]-newCol[i]
     
 
-#     return deff
-#   #To Do
-# matrix=np.array([[1,3,1],
-#                  [6,4,2],
-#                  [5,1,7],
-#                  [9,3,3],
-#                  [8,5,4],
-#                  ])
+    return deff
+  #To Do
+matrix=np.array([[1,3,1],
+                 [6,4,2],
+                 [5,1,7],
+                 [9,3,3],
+                 [8,5,4],
+                 ])
 
-# returned_array=decrypt_matrix(matrix)
-# print(returned_array)
-# #This should print [-13, 1]
+returned_array=decrypt_matrix(matrix)
+print(returned_array)
+# This should print [-13, 1]
 
 
 #TASK 4
@@ -141,7 +131,7 @@ import numpy as np
 
 # print('################')
 
-# Test case 2
+# # Test case 2
 # floor = np.array([['3', '8', '4', '6', '1'],
 #                   ['7', '2', '1', '9', '3'],
 #                   ['9', '0', '7', '5', '8'],
