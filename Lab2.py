@@ -3,6 +3,10 @@ class Node:
     def __init__(self,data):
         self.color = data
         self.next = None
+    
+    def createList(array):
+        print(array)
+
 
 # def createList(array):
 #     head =None
@@ -51,16 +55,16 @@ class Node:
 
 # import numpy as np
 
-# print('==============Test Case 1=============')
-# building_1 = createList(np.array(['Red', 'Green', 'Yellow', 'Red', 'Blue', 'Green']))
-# building_2 = createList(np.array(['Red', 'Green', 'Yellow', 'Red', 'Blue', 'Green']))
-# print('Building 1: ', end=' ')
-# printLinkedList(building_1)
-# print('Building 2: ', end=' ')
-# printLinkedList(building_2)
-# returned_value = check_similar(building_1, building_2)
-# print(returned_value)  # This should print 'Similar'
-# print()
+print('==============Test Case 1=============')
+building_1 = createList(np.array(['Red', 'Green', 'Yellow', 'Red', 'Blue', 'Green']))
+building_2 = createList(np.array(['Red', 'Green', 'Yellow', 'Red', 'Blue', 'Green']))
+print('Building 1: ', end=' ')
+printLinkedList(building_1)
+print('Building 2: ', end=' ')
+printLinkedList(building_2)
+returned_value = check_similar(building_1, building_2)
+print(returned_value)  # This should print 'Similar'
+print()
 
 # print('==============Test Case 2=============')
 # building_1 = createList(np.array(['Red', 'Green', 'Yellow', 'Red', 'Yellow', 'Green']))
