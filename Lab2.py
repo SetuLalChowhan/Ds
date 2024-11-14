@@ -97,6 +97,96 @@
 
 #TASK 2
 
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
+    
+#     def createList(array):
+#         print(array)
+
+
+# def createList(array):
+#     head =None
+#     for i in array:
+#         if head ==None:
+#             node =Node(i)
+#             head = node
+#         else:
+#             current =head
+#             while current.next is not None:
+#                 current =current.next
+            
+#             node =Node(i)
+#             current.next =node
+    
+#     return head
+
+
+# def printLinkedList(head):
+#     current =head
+
+#     while current is not None:
+#         print(current.data,end="-->")
+#         current=current.next
+    
+#     print(None)
+# def remove_compartment(head,n):
+
+#     current = head
+#     count =0
+
+#     while current is not None:
+#         count+=1
+#         current=current.next
+    
+#     pos = count-n;
+#     if n > count:
+#         return head
+#     else:
+#         if pos==0:
+#             head = head.next
+#             return head
+                   
+#         else:  
+#             current = head
+#             delPos=0
+#             while current:
+#                 if delPos  ==pos-1:
+#                     current.next = current.next.next 
+#                     break
+#                 current =current.next
+#                 delPos+=1
+#             return head
+                         
+# import numpy as np
+# print('==============Test Case 1=============')
+# head = createList(np.array([10,15,34,41,56,72]))
+# print('Original Compartment Sequence: ', end = ' ')
+# printLinkedList(head)
+# head = remove_compartment(head,2)
+# print('Changed Compartment Sequence: ', end = ' ')
+# printLinkedList(head) #This should print 10-->15-->34-->41-->72
+# print()
+# print('==============Test Case 2=============')
+# head = createList(np.array([10,15,34,41,56,72]))
+# print('Original Compartment Sequence: ', end = ' ')
+# printLinkedList(head)
+# head = remove_compartment(head,7)
+# print('Changed Compartment Sequence: ', end = ' ')
+# printLinkedList(head) #This should print 10-->15-->34-->41-->56-->72
+# print()
+# print('==============Test Case 3=============')
+# head = createList(np.array([10,15,34,41,56,72]))
+# print('Original Compartment Sequence: ', end = ' ')
+# printLinkedList(head)
+# head = remove_compartment(head,6)
+# print('Changed Compartment Sequence: ', end = ' ')
+# printLinkedList(head) #This should print 15-->34-->41-->56-->72
+# print()
+
+#TASK 3
+
 class Node:
     def __init__(self,data):
         self.data = data
@@ -130,57 +220,35 @@ def printLinkedList(head):
         print(current.data,end="-->")
         current=current.next
     
-    print(None)
-def remove_compartment(head,n):
-
-    current = head
-    count =0
-
-    while current is not None:
-        count+=1
-        current=current.next
+    print(None)# class Node:
     
-    pos = count-n;
-    if n > count:
-        return head
-    else:
-        if pos==0:
-            head = head.next
-            return head
-                   
-        else:  
-            current = head
-            delPos=0
-            while current:
-                if delPos  ==pos-1:
-                    current.next = current.next.next 
-                    break
-                current =current.next
-                delPos+=1
-            return head
-                         
+def assemble_conga_line(conga_line):
+    current =conga_line
+    while current.next:
+        one =int(current.data)
+        two=int(current.next.data)
+        if one > two:
+            print("hi")
+            return ("False")
+        current =current.next
+    
+    return ("True")
+
+
 import numpy as np
 print('==============Test Case 1=============')
-head = createList(np.array([10,15,34,41,56,72]))
-print('Original Compartment Sequence: ', end = ' ')
-printLinkedList(head)
-head = remove_compartment(head,2)
-print('Changed Compartment Sequence: ', end = ' ')
-printLinkedList(head) #This should print 10-->15-->34-->41-->72
+conga_line = createList(np.array([10,15,34,41,56,72]))
+print('Original Conga Line: ', end = ' ')
+printLinkedList(conga_line)
+returned_value = assemble_conga_line(conga_line)
+print(returned_value) #This should print True
+# unittest.output_test(returned_value, True)
 print()
 print('==============Test Case 2=============')
-head = createList(np.array([10,15,34,41,56,72]))
-print('Original Compartment Sequence: ', end = ' ')
-printLinkedList(head)
-head = remove_compartment(head,7)
-print('Changed Compartment Sequence: ', end = ' ')
-printLinkedList(head) #This should print 10-->15-->34-->41-->56-->72
-print()
-print('==============Test Case 3=============')
-head = createList(np.array([10,15,34,41,56,72]))
-print('Original Compartment Sequence: ', end = ' ')
-printLinkedList(head)
-head = remove_compartment(head,6)
-print('Changed Compartment Sequence: ', end = ' ')
-printLinkedList(head) #This should print 15-->34-->41-->56-->72
+conga_line = createList(np.array([10,15,44,41,56,72]))
+print('Original Conga Line: ', end = ' ')
+printLinkedList(conga_line)
+returned_value = assemble_conga_line(conga_line)
+print(returned_value) #This should print False
+# unittest.output_test(returned_value, False)
 print()
