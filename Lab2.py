@@ -187,68 +187,68 @@
 
 #TASK 3
 
-class Node:
-    def __init__(self,data):
-        self.data = data
-        self.next = None
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
     
-    def createList(array):
-        print(array)
+#     def createList(array):
+#         print(array)
 
 
-def createList(array):
-    head =None
-    for i in array:
-        if head ==None:
-            node =Node(i)
-            head = node
-        else:
-            current =head
-            while current.next is not None:
-                current =current.next
+# def createList(array):
+#     head =None
+#     for i in array:
+#         if head ==None:
+#             node =Node(i)
+#             head = node
+#         else:
+#             current =head
+#             while current.next is not None:
+#                 current =current.next
             
-            node =Node(i)
-            current.next =node
+#             node =Node(i)
+#             current.next =node
     
-    return head
+#     return head
 
 
-def printLinkedList(head):
-    current =head
+# def printLinkedList(head):
+#     current =head
 
-    while current is not None:
-        print(current.data,end="-->")
-        current=current.next
+#     while current is not None:
+#         print(current.data,end="-->")
+#         current=current.next
     
-    print(None)# class Node:
+#     print(None)# class Node:
     
-def assemble_conga_line(conga_line):
-    current =conga_line
-    while current.next:
-        one =int(current.data)
-        two=int(current.next.data)
-        if one > two:
-            print("hi")
-            return ("False")
-        current =current.next
+# def assemble_conga_line(conga_line):
+#     current =conga_line
+#     while current.next:
+#         one =int(current.data)
+#         two=int(current.next.data)
+#         if one > two:
+#             print("hi")
+#             return ("False")
+#         current =current.next
     
-    return ("True")
+#     return ("True")
 
 
-import numpy as np
-print('==============Test Case 1=============')
-conga_line = createList(np.array([10,15,34,41,56,72]))
-print('Original Conga Line: ', end = ' ')
-printLinkedList(conga_line)
-returned_value = assemble_conga_line(conga_line)
-print(returned_value) #This should print True
-# unittest.output_test(returned_value, True)
-print()
-print('==============Test Case 2=============')
-conga_line = createList(np.array([10,15,44,41,56,72]))
-print('Original Conga Line: ', end = ' ')
-printLinkedList(conga_line)
-returned_value = assemble_conga_line(conga_line)
-print(returned_value) #This should print False
-# unittest.output_test(returned_value, False)
-print()
+# import numpy as np
+# print('==============Test Case 1=============')
+# conga_line = createList(np.array([10,15,34,41,56,72]))
+# print('Original Conga Line: ', end = ' ')
+# printLinkedList(conga_line)
+# returned_value = assemble_conga_line(conga_line)
+# print(returned_value) #This should print True
+# # unittest.output_test(returned_value, True)
+# print()
+# print('==============Test Case 2=============')
+# conga_line = createList(np.array([10,15,44,41,56,72]))
+# print('Original Conga Line: ', end = ' ')
+# printLinkedList(conga_line)
+# returned_value = assemble_conga_line(conga_line)
+# print(returned_value) #This should print False
+# # unittest.output_test(returned_value, False)
+# print()
