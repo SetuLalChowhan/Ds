@@ -1,4 +1,4 @@
-#TASK 1
+# # TASK 1
 # class Node:
 #     def __init__(self,data):
 #         self.color = data
@@ -150,13 +150,13 @@
                    
 #         else:  
 #             current = head
-#             delPos=0
+#             index=0
 #             while current:
-#                 if delPos  ==pos-1:
+#                 if index  ==pos-1: #4
 #                     current.next = current.next.next 
 #                     break
 #                 current =current.next
-#                 delPos+=1
+#                 index+=1
 #             return head
                          
 # import numpy as np
@@ -187,68 +187,136 @@
 
 #TASK 3
 
-# class Node:
-#     def __init__(self,data):
-#         self.data = data
-#         self.next = None
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
     
-#     def createList(array):
-#         print(array)
+    def createList(array):
+        print(array)
 
 
-# def createList(array):
-#     head =None
-#     for i in array:
-#         if head ==None:
-#             node =Node(i)
-#             head = node
-#         else:
-#             current =head
-#             while current.next is not None:
-#                 current =current.next
+def createList(array):
+    head =None
+    for i in array:
+        if head ==None:
+            node =Node(i)
+            head = node
+        else:
+            current =head
+            while current.next is not None:
+                current =current.next
             
-#             node =Node(i)
-#             current.next =node
+            node =Node(i)
+            current.next =node
     
-#     return head
+    return head
 
+
+def printLinkedList(head):
+    current =head
+
+    while current is not None:
+        print(current.data,end="-->")
+        current=current.next
+    
+    print(None)# class Node:
+    
+def assemble_conga_line(conga_line):
+    current =conga_line
+    while current.next:
+        one =int(current.data)
+        two=int(current.next.data)
+        if one > two:
+            print("hi")
+            return ("False")
+        current =current.next
+    
+    return ("True")
+
+
+import numpy as np
+print('==============Test Case 1=============')
+conga_line = createList(np.array([10,15,34,41,56,72]))
+print('Original Conga Line: ', end = ' ')
+printLinkedList(conga_line)
+returned_value = assemble_conga_line(conga_line)
+print(returned_value) #This should print True
+# unittest.output_test(returned_value, True)
+print()
+print('==============Test Case 2=============')
+conga_line = createList(np.array([10,15,44,41,56,72]))
+print('Original Conga Line: ', end = ' ')
+printLinkedList(conga_line)
+returned_value = assemble_conga_line(conga_line)
+print(returned_value) #This should print False
+# unittest.output_test(returned_value, False)
+print()
+
+# TASK4
+
+# class Node:
+#   def __init__(self,elem,next = None):
+#     self.elem,self.next = elem,next
+
+# def createList(arr):
+#   head = Node(arr[0])
+#   tail = head
+#   for i in range(1,len(arr)):
+#     newNode = Node(arr[i])
+#     tail.next = newNode
+#     tail = newNode
+#   return head
 
 # def printLinkedList(head):
+#   temp = head
+#   while temp != None:
+#     if temp.next != None:
+#       print(temp.elem, end = '-->')
+#     else:
+#       print(temp.elem)
+#     temp = temp.next
+#   print()
+
+
+# def word_Decoder(head):
 #     current =head
 
-#     while current is not None:
-#         print(current.data,end="-->")
-#         current=current.next
-    
-#     print(None)# class Node:
-    
-# def assemble_conga_line(conga_line):
-#     current =conga_line
-#     while current.next:
-#         one =int(current.data)
-#         two=int(current.next.data)
-#         if one > two:
-#             print("hi")
-#             return ("False")
+#     index = 0
+
+#     newHead =None
+
+#     while current:
+#         if index %3 ==0 and index!=0 :
+#             if newHead==None:
+#                 node =Node(current.elem)
+#                 newHead =node
+#             else:
+#                 node =Node(current.elem)
+#                 node.next =newHead
+#                 newHead =node
+        
 #         current =current.next
-    
-#     return ("True")
+#         index+=1
+#     return newHead
 
-
+# #Driver Code
 # import numpy as np
 # print('==============Test Case 1=============')
-# conga_line = createList(np.array([10,15,34,41,56,72]))
-# print('Original Conga Line: ', end = ' ')
-# printLinkedList(conga_line)
-# returned_value = assemble_conga_line(conga_line)
-# print(returned_value) #This should print True
-# # unittest.output_test(returned_value, True)
-# print()
+# head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
+# print("Encoded Word:")
+# printLinkedList(head) #This should print B→M→D→T→N→O→A→P→S→C
+
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)    #This should print None→C→A→T
+
 # print('==============Test Case 2=============')
-# conga_line = createList(np.array([10,15,44,41,56,72]))
-# print('Original Conga Line: ', end = ' ')
-# printLinkedList(conga_line)
-# returned_value = assemble_conga_line(conga_line)
-# print(returned_value) #This should print False
-# # unittest.output_test(returned_value, False)
-# print()
+
+# head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
+# print("Encoded Word:")
+# printLinkedList(head) #This should print Z→O→T→N→X
+
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)    #This should print None→N
