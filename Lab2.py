@@ -414,6 +414,7 @@
 # print("Merged Linked List:")
 # printLinkedList(head)    #This should print   4-> 8 → 2-> 6 → -2 → 5 → -4 -> -3
 
+#TASK6
 class Node:
     def __init__(self, elem, next=None):
         self.elem, self.next = elem, next
@@ -430,11 +431,14 @@ def createList(arr):
 
 
 def printLinkedList(head):
-    temp = head
-    while temp:
-        print(temp.elem, end=" --> ")
-        temp = temp.next
-    print("None")  # Append "None" at the end
+  temp = head
+  while temp != None:
+    if temp.next != None:
+      print(temp.elem, end = '-->')
+    else:
+      print(temp.elem)
+    temp = temp.next
+  print()
 
 
 def sum_dist(head, arr):     
@@ -456,4 +460,4 @@ print('==============Test Case 1 =============')
 LL1 = createList(np.array([10, 16, -5, 9, 3, 4]))
 dist = np.array([2, 0, 5, 2, 8])
 returned_value = sum_dist(LL1, dist)
-print(f'Sum of Nodes: {returned_value}')  # This should print Sum of Nodes: 4
+print(f'Sum of Nodes: {returned_value}') 
