@@ -254,6 +254,78 @@
 
 # TASK4
 
+# class Node:
+#   def __init__(self,elem,next = None):
+#     self.elem,self.next = elem,next
+
+# def createList(arr):
+#   head = Node(arr[0])
+#   tail = head
+#   for i in range(1,len(arr)):
+#     newNode = Node(arr[i])
+#     tail.next = newNode
+#     tail = newNode
+#   return head
+
+# def printLinkedList(head):
+#   temp = head
+#   while temp != None:
+#     if temp.next != None:
+#       print(temp.elem, end = '-->')
+#     else:
+#       print(temp.elem)
+#     temp = temp.next
+#   print()
+
+
+# def word_Decoder(head):
+#     current =head
+
+#     index = 0
+
+#     newHead =None
+
+#     while current:
+#         if index %3 ==0 and index!=0 :
+#             if newHead==None:
+#                 node =Node(current.elem)
+#                 newHead =node
+#             else:
+#                 node =Node(current.elem)
+#                 node.next =newHead
+#                 newHead =node
+            
+    
+#         current =current.next
+#         index+=1
+#     first_node = Node("None")
+#     first_node.next = newHead
+#     newHead =first_node
+#     return newHead
+
+# #Driver Code
+# import numpy as np
+# print('==============Test Case 1=============')
+# head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
+# print("Encoded Word:")
+# printLinkedList(head) #This should print B→M→D→T→N→O→A→P→S→C
+
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)    #This should print None→C→A→T
+
+# print('==============Test Case 2=============')
+
+# head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
+# print("Encoded Word:")
+# printLinkedList(head) #This should print Z→O→T→N→X
+
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)    #This should print None→N
+
+#TASK 5
+
 class Node:
   def __init__(self,elem,next = None):
     self.elem,self.next = elem,next
@@ -278,44 +350,66 @@ def printLinkedList(head):
   print()
 
 
-def word_Decoder(head):
-    current =head
 
-    index = 0
+def alternate_merge(head1, head2):
+    current1 = head1
+    current2 = head2
 
-    newHead =None
+    while current1 and current2:
+        # Save next pointers
+        next1 = current1.next
+        next2 = current2.next
 
-    while current:
-        if index %3 ==0 and index!=0 :
-            if newHead==None:
-                node =Node(current.elem)
-                newHead =node
-            else:
-                node =Node(current.elem)
-                node.next =newHead
-                newHead =node
+        # Alternate merge
+        current1.next = current2
+        current2.next = next1
+
         
-        current =current.next
-        index+=1
-    return newHead
+        current1 = next1
+        current2 = next2
 
-#Driver Code
+    return head1
+
+
+
+
 import numpy as np
-print('==============Test Case 1=============')
-head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
-print("Encoded Word:")
-printLinkedList(head) #This should print B→M→D→T→N→O→A→P→S→C
 
-result = word_Decoder(head)
-print("Decoded Word:")
-printLinkedList(result)    #This should print None→C→A→T
+print('==============Test Case 1=============')
+head1 = createList(np.array([1,2,6,8,11]))
+head2 = createList(np.array([5,7,3,9,4]))
+
+print("Linked List 1:")
+printLinkedList(head1)
+print("Linked List 2:")
+printLinkedList(head2)
+
+head = alternate_merge(head1, head2)
+print("Merged Linked List:")
+printLinkedList(head)    #This should print    1 --> 5 --> 2 --> 7 --> 6 --> 3 --> 8 --> 9 --> 11 --> 4
 
 print('==============Test Case 2=============')
+head1 = createList(np.array([5, 3, 2, -4]))
+head2 = createList(np.array([-4, -6, 1]))
+print("Linked List 1:")
+printLinkedList(head1)
+print("Linked List 2:")
+printLinkedList(head2)
 
-head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
-print("Encoded Word:")
-printLinkedList(head) #This should print Z→O→T→N→X
+head = alternate_merge(head1, head2)
+print("Merged Linked List:")
+printLinkedList(head)   
 
-result = word_Decoder(head)
-print("Decoded Word:")
-printLinkedList(result)    #This should print None→N
+
+print('==============Test Case 3=============')
+head1 = createList(np.array([4, 2, -2, -4]))
+head2 = createList(np.array([8, 6, 5, -3]))
+
+print("Linked List 1:")
+printLinkedList(head1)
+print("Linked List 2:")
+printLinkedList(head2)
+
+head = alternate_merge(head1, head2)
+print("Merged Linked List:")
+printLinkedList(head)    #This should print   4-> 8 → 2-> 6 → -2 → 5 → -4 -> -3

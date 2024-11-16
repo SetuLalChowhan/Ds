@@ -1,9 +1,4 @@
-print('==============Test Case 2=============')
 
-head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
-print("Encoded Word:")
-printLinkedList(head) #This should print Z→O→T→N→X
-
-result = word_Decoder(head)
-print("Decoded Word:")
-printLinkedList(result)    #This should print None→N
+head = alternate_merge(head1, head2)
+print("Merged Linked List:")
+printLinkedList(head)    #This should print    5 → -4 -> 3 → -6 -> 2 -> 1 -> -4
