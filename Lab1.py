@@ -1,5 +1,4 @@
 import numpy as np
-
 # #TASK 1
 # def mergeLineup(pokemon_1, pokemon_2):
 #     for i in range(len(pokemon_1)):
@@ -64,37 +63,37 @@ import numpy as np
 
 #TASK 3
 
-def decrypt_matrix(matrix):
+# def decrypt_matrix(matrix):
 
-    rows = len(matrix)
+#     rows = len(matrix)
     
-    cols = len(matrix[0])
+#     cols = len(matrix[0])
 
-    newCol = np.zeros(cols,dtype=int)
+#     newCol = np.zeros(cols,dtype=int)
     
-    for i in range(rows):
-        for j in range(cols):
-            newCol[j]+=matrix[i][j] 
+#     for i in range(rows):
+#         for j in range(cols):
+#             newCol[j]+=matrix[i][j] 
     
     
-    deff = np.zeros(cols-1,dtype=int)
+#     deff = np.zeros(cols-1,dtype=int)
    
 
-    for i in range(cols-1):
-        deff[i] =newCol[i+1]-newCol[i]
+#     for i in range(cols-1):
+#         deff[i] =newCol[i+1]-newCol[i]
     
 
-    return deff
-  #To Do
-matrix=np.array([[1,3,1],
-                 [6,4,2],
-                 [5,1,7],
-                 [9,3,3],
-                 [8,5,4],
-                 ])
+#     return deff
+#   #To Do
+# matrix=np.array([[1,3,1],
+#                  [6,4,2],
+#                  [5,1,7],
+#                  [9,3,3],
+#                  [8,5,4],
+#                  ])
 
-returned_array=decrypt_matrix(matrix)
-print(returned_array)
+# returned_array=decrypt_matrix(matrix)
+# print(returned_array)
 # This should print [-13, 1]
 
 
