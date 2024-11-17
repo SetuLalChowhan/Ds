@@ -1,2 +1,2 @@
 
-                sum+=current.elem
+import numpy as np

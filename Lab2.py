@@ -294,8 +294,6 @@
 #                 node =Node(current.elem)
 #                 node.next =newHead
 #                 newHead =node
-            
-    
 #         current =current.next
 #         index+=1
 #     first_node = Node("None")
@@ -308,17 +306,17 @@
 # print('==============Test Case 1=============')
 # head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
 # print("Encoded Word:")
-# printLinkedList(head) #This should print B→M→D→T→N→O→A→P→S→C
+# printLinkedList(head) 
 
 # result = word_Decoder(head)
 # print("Decoded Word:")
-# printLinkedList(result)    #This should print None→C→A→T
+# printLinkedList(result)   
 
 # print('==============Test Case 2=============')
 
 # head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
 # print("Encoded Word:")
-# printLinkedList(head) #This should print Z→O→T→N→X
+# printLinkedList(head)
 
 # result = word_Decoder(head)
 # print("Decoded Word:")
@@ -326,91 +324,89 @@
 
 #TASK 5
 
-class Node:
-  def __init__(self,elem,next = None):
-    self.elem,self.next = elem,next
+# class Node:
+#   def __init__(self,elem,next = None):
+#     self.elem,self.next = elem,next
 
-def createList(arr):
-  head = Node(arr[0])
-  tail = head
-  for i in range(1,len(arr)):
-    newNode = Node(arr[i])
-    tail.next = newNode
-    tail = newNode
-  return head
+# def createList(arr):
+#   head = Node(arr[0])
+#   tail = head
+#   for i in range(1,len(arr)):
+#     newNode = Node(arr[i])
+#     tail.next = newNode
+#     tail = newNode
+#   return head
 
-def printLinkedList(head):
-  temp = head
-  while temp != None:
-    if temp.next != None:
-      print(temp.elem, end = '-->')
-    else:
-      print(temp.elem)
-    temp = temp.next
-  print()
+# def printLinkedList(head):
+#   temp = head
+#   while temp != None:
+#     if temp.next != None:
+#       print(temp.elem, end = '-->')
+#     else:
+#       print(temp.elem)
+#     temp = temp.next
+#   print()
 
 
 
-def alternate_merge(head1, head2):
-    current1 = head1
-    current2 = head2
+# def alternate_merge(head1, head2):
+#     current1 = head1
+#     current2 = head2
 
-    while current1 and current2:
-        next1 = current1.next
-        next2 = current2.next
+#     while current1 and current2:
+#         next1 = current1.next
+#         next2 = current2.next
 
-        current1.next = current2
-        current2.next = next1
-
+#         current1.next = current2
+#         current2.next = next1
         
-        current1 = next1
-        current2 = next2
+#         current1 = next1
+#         current2 = next2
 
-    return head1
+#     return head1
 
+# import numpy as np
 
+# print('==============Test Case 1=============')
+# head1 = createList(np.array([1,2,6,8,11]))
+# head2 = createList(np.array([5,7,3,9,4]))
 
+# print("Linked List 1:")
+# printLinkedList(head1)
+# print("Linked List 2:")
+# printLinkedList(head2)
 
-import numpy as np
+# head = alternate_merge(head1, head2)
+# print("Merged Linked List:")
+# printLinkedList(head)  
 
-print('==============Test Case 1=============')
-head1 = createList(np.array([1,2,6,8,11]))
-head2 = createList(np.array([5,7,3,9,4]))
+# print('==============Test Case 2=============')
+# head1 = createList(np.array([5, 3, 2, -4]))
+# head2 = createList(np.array([-4, -6, 1]))
+# print("Linked List 1:")
+# printLinkedList(head1)
+# print("Linked List 2:")
+# printLinkedList(head2)
 
-print("Linked List 1:")
-printLinkedList(head1)
-print("Linked List 2:")
-printLinkedList(head2)
-
-head = alternate_merge(head1, head2)
-print("Merged Linked List:")
-printLinkedList(head)    #This should print    1 --> 5 --> 2 --> 7 --> 6 --> 3 --> 8 --> 9 --> 11 --> 4
-
-print('==============Test Case 2=============')
-head1 = createList(np.array([5, 3, 2, -4]))
-head2 = createList(np.array([-4, -6, 1]))
-print("Linked List 1:")
-printLinkedList(head1)
-print("Linked List 2:")
-printLinkedList(head2)
-
-head = alternate_merge(head1, head2)
-print("Merged Linked List:")
-printLinkedList(head)   
+# head = alternate_merge(head1, head2)
+# print("Merged Linked List:")
+# printLinkedList(head)   
 
 
-print('==============Test Case 3=============')
-head1 = createList(np.array([4, 2, -2, -4]))
-head2 = createList(np.array([8, 6, 5, -3]))
+# print('==============Test Case 3=============')
+# head1 = createList(np.array([4, 2, -2, -4]))
+# head2 = createList(np.array([8, 6, 5, -3]))
 
-print("Linked List 1:")
-printLinkedList(head1)
-print("Linked List 2:")
-printLinkedList(head2)
+# print("Linked List 1:")
+# printLinkedList(head1)
+# print("Linked List 2:")
+# printLinkedList(head2)
 
-head = alternate_merge(head1, head2)
-print("Merged Linked List:")
-printLinkedList(head)    #This should print   4-> 8 → 2-> 6 → -2 → 5 → -4 -> -3
+# head = alternate_merge(head1, head2)
+# print("Merged Linked List:")
+# printLinkedList(head)    #This should print   4-> 8 → 2-> 6 → -2 → 5 → -4 -> -3
+
+#TASK6
 
 #TASK6
 # class Node:
@@ -460,3 +456,5 @@ printLinkedList(head)    #This should print   4-> 8 → 2-> 6 → -2 → 5 → -
 # dist = np.array([2, 0, 5, 2, 8])
 # returned_value = sum_dist(LL1, dist)
 # print(f'Sum of Nodes: {returned_value}') 
+
+
