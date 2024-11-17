@@ -254,73 +254,73 @@
 
 # TASK4
 
-class Node:
-  def __init__(self,elem,next = None):
-    self.elem,self.next = elem,next
+# class Node:
+#   def __init__(self,elem,next = None):
+#     self.elem,self.next = elem,next
 
-def createList(arr):
-  head = Node(arr[0])
-  tail = head
-  for i in range(1,len(arr)):
-    newNode = Node(arr[i])
-    tail.next = newNode
-    tail = newNode
-  return head
+# def createList(arr):
+#   head = Node(arr[0])
+#   tail = head
+#   for i in range(1,len(arr)):
+#     newNode = Node(arr[i])
+#     tail.next = newNode
+#     tail = newNode
+#   return head
 
-def printLinkedList(head):
-  temp = head
-  while temp != None:
-    if temp.next != None:
-      print(temp.elem, end = '-->')
-    else:
-      print(temp.elem)
-    temp = temp.next
-  print()
+# def printLinkedList(head):
+#   temp = head
+#   while temp != None:
+#     if temp.next != None:
+#       print(temp.elem, end = '-->')
+#     else:
+#       print(temp.elem)
+#     temp = temp.next
+#   print()
 
 
-def word_Decoder(head):
-    current =head
+# def word_Decoder(head):
+#     current =head
 
-    index = 0
+#     index = 0
 
-    dummy_head =None
+#     dummy_head =None
 
-    while current:
-        if index %3 ==0 and index!=0 :
-            if dummy_head ==None:
-                node =Node(current.elem)
-                dummy_head  =node
-            else:
-                node =Node(current.elem)
-                node.next =dummy_head 
-                dummy_head  =node
-        current =current.next
-        index+=1
-    first_node = Node("None")
-    first_node.next = dummy_head 
-    dummy_head  =first_node
-    return dummy_head 
+#     while current:
+#         if index %3 ==0 and index!=0 :
+#             if dummy_head ==None:
+#                 node =Node(current.elem)
+#                 dummy_head  =node
+#             else:
+#                 node =Node(current.elem)
+#                 node.next =dummy_head 
+#                 dummy_head  =node
+#         current =current.next
+#         index+=1
+#     first_node = Node("None")
+#     first_node.next = dummy_head 
+#     dummy_head  =first_node
+#     return dummy_head 
 
-#Driver Code
-import numpy as np
-print('==============Test Case 1=============')
-head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
-print("Encoded Word:")
-printLinkedList(head) 
+# #Driver Code
+# import numpy as np
+# print('==============Test Case 1=============')
+# head = createList(np.array(['B', 'M', 'D', 'T', 'N', 'O', 'A', 'P', 'S', 'C']))
+# print("Encoded Word:")
+# printLinkedList(head) 
 
-result = word_Decoder(head)
-print("Decoded Word:")
-printLinkedList(result)   
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)   
 
-print('==============Test Case 2=============')
+# print('==============Test Case 2=============')
 
-head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
-print("Encoded Word:")
-printLinkedList(head)
+# head = createList(np.array(['Z', 'O', 'T', 'N', 'X']))
+# print("Encoded Word:")
+# printLinkedList(head)
 
-result = word_Decoder(head)
-print("Decoded Word:")
-printLinkedList(result)    #This should print None→N
+# result = word_Decoder(head)
+# print("Decoded Word:")
+# printLinkedList(result)    #This should print None→N
 
 #TASK 5
 
