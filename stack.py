@@ -66,16 +66,24 @@ def print_stack(st):
     print_stack(st)
     st.push(p)
 
+# stack =Stack()
+# stack.push(5)
+# stack.push(6)
+# stack.push(10)
+# stack.pop()
+
+# print(stack.peek())
+# print_stack(stack)
 
 # def diamond_count(stack, string):
 #     diamond_count = 0
 #     for char in string:
 #         if char == '<':
-#             stack.push(char)  # Push '<' onto the stack
+#             stack.push(char) 
 #         elif char == '>':
 #             if not stack.isEmpty() and stack.peek() == '<':
-#                 stack.pop()  # Pop the matching '<' from the stack
-#                 diamond_count += 1  # Increment the diamond count
+#                 stack.pop()  
+#                 diamond_count += 1  
 #     return diamond_count
 
 
@@ -102,48 +110,48 @@ def print_stack(st):
 # print('-----------------------------------------')
 
 
-# def remove_block(stack, n):
-#     temp_stack = Stack()
+def remove_block(stack, n):
+    temp_stack = Stack()
 
-#     if stack.isEmpty() or n <= 0:
-#         print("Invalid operation: Stack is empty or invalid position")
-#         return
+    if stack.isEmpty() or n <= 0:
+        print("Invalid operation: Stack is empty or invalid position")
+        return
 
-#     count = 0
-#     while not stack.isEmpty() and count < n - 1:
-#         temp_stack.push(stack.pop())
-#         count += 1
+    count = 0
+    while not stack.isEmpty() and count < n - 1:
+        temp_stack.push(stack.pop())
+        count += 1
 
-#     if not stack.isEmpty():
-#         stack.pop()
-#     else:
-#         print("Invalid operation: n is larger than the size of the stack")
-#         while not temp_stack.isEmpty():
-#             stack.push(temp_stack.pop())
-#         return
+    if not stack.isEmpty():
+        stack.pop()
+    else:
+        print("Invalid operation: n is larger than the size of the stack")
+        while not temp_stack.isEmpty():
+            stack.push(temp_stack.pop())
+        return
 
-#     while not temp_stack.isEmpty():
-#         stack.push(temp_stack.pop())
+    while not temp_stack.isEmpty():
+        stack.push(temp_stack.pop())
 
 
-# print('Test 01')
-# st = Stack()
-# st.push(4)
-# st.push(19)
-# st.push(23)
-# st.push(17)
-# st.push(5)
-# print('Stack:')
-# print_stack(st)
-# print('------')
-# remove_block(st, 2)
-# print('After Removal:')
-# print_stack(st)
-# print('------')
+print('Test 01')
+st = Stack()
+st.push(4)
+st.push(19)
+st.push(23)
+st.push(17)
+st.push(5)
+print('Stack:')
+print_stack(st)
+print('------')
+remove_block(st, 2)
+print('After Removal:')
+print_stack(st)
+print('------')
 
-# print()
-# print('======================================')
-# print()
+print()
+print('======================================')
+print()
 
 # print('Test 02')
 # st = Stack()

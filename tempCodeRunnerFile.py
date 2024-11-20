@@ -1,2 +1,1 @@
-
-s.push(12)
+print(stack.peek())
