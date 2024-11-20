@@ -66,16 +66,16 @@ def swap(head):
         current=current.next
         count+=1
     
-    start =2
-    end =count-1
+    start =5
+    end =count-5
     current =head
     first_node =None
     last_node=None
     while current:
-        if index ==2 :
+        if index ==start :
             first_node = current.elem
         
-        if index ==end:
+        if index ==end+1:
             last_node = current.elem
         current =current.next
         index+=1  

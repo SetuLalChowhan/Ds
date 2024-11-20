@@ -1,2 +1,2 @@
 
-import numpy as np
+s.push(12)
