@@ -217,4 +217,60 @@
 # doubleA.show()
 
 # print(doubleA.length())
-  
+
+import numpy as np
+import fhm_unittest as unittest
+class Node:
+  def __init__(self,elem,next = None):
+    self.elem,self.next = elem,next
+
+def createList(arr):
+  head = Node(arr[0])
+  tail = head
+  for i in range(1,len(arr)):
+    newNode = Node(arr[i])
+    tail.next = newNode
+    tail = newNode
+  return head
+
+def printLinkedList(head):
+  temp = head
+  while temp != None:
+    if temp.next != None:
+      print(temp.elem, end = '-->')
+    else:
+      print(temp.elem)
+    temp = temp.next
+  print()
+  return head
+
+def removeDuplicates(head):
+    current = head
+    duplicate = 0
+    while current and current.next:  
+        if current.elem == current.next.elem:
+            duplicate += current.elem
+            current.next = current.next.next  
+        else:
+            current = current.next  
+    print("Total Duplicate Transaction Amount: ", duplicate)
+    print("Modified List: ", end="")
+    printLinkedList(head)
+
+                
+
+n1=Node(10,None)
+n2=Node(20,None)
+n3=Node(30,None)
+n4=Node(10,None)
+n5=Node(10,None)
+n6=Node(50,None)
+n7=Node(50,None)
+n1.next=n2
+n2.next=n3
+n3.next=n4
+n4.next=n5
+n5.next=n6
+n6.next=n7
+
+printLinkedList(removeDuplicates(n1))

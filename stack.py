@@ -24,49 +24,49 @@
 # s.pop()
 # print(s.values)  
  
-class Node:
-    def __init__(self, elem=None, next=None):
-        self.elem = elem
-        self.next = next
+# class Node:
+#     def __init__(self, elem=None, next=None):
+#         self.elem = elem
+#         self.next = next
 
 
-class Stack:
-    def __init__(self):
-        self.__top = None
+# class Stack:
+#     def __init__(self):
+#         self.__top = None
 
-    def push(self, elem):
-        nn = Node(elem, self.__top)
-        self.__top = nn
+#     def push(self, elem):
+#         nn = Node(elem, self.__top)
+#         self.__top = nn
 
-    def pop(self):
-        if self.__top is None:
-            return None
-        e = self.__top
-        self.__top = self.__top.next
-        return e.elem
+#     def pop(self):
+#         if self.__top is None:
+#             return None
+#         e = self.__top
+#         self.__top = self.__top.next
+#         return e.elem
 
-    def peek(self):
-        if self.__top is None:
-            return None
-        return self.__top.elem
+#     def peek(self):
+#         if self.__top is None:
+#             return None
+#         return self.__top.elem
 
-    def isEmpty(self):
-        return self.__top is None
+#     def isEmpty(self):
+#         return self.__top is None
 
 
-def print_stack(st):
-    if st.isEmpty():
-        return
-    p = st.pop()
-    print('|', p, end=' ')
-    if p < 10:
-        print(' |')
-    else:
-        print('|')
-    print_stack(st)
-    st.push(p)
+# def print_stack(st):
+#     if st.isEmpty():
+#         return
+#     p = st.pop()
+#     print('|', p, end=' ')
+#     if p < 10:
+#         print(' |')
+#     else:
+#         print('|')
+#     print_stack(st)
+#     st.push(p)
 
-# stack =Stack()
+# # stack =Stack()
 # stack.push(5)
 # stack.push(6)
 # stack.push(10)
@@ -110,48 +110,48 @@ def print_stack(st):
 # print('-----------------------------------------')
 
 
-def remove_block(stack, n):
-    temp_stack = Stack()
+# def remove_block(stack, n):
+#     temp_stack = Stack()
 
-    if stack.isEmpty() or n <= 0:
-        print("Invalid operation: Stack is empty or invalid position")
-        return
+#     if stack.isEmpty() or n <= 0:
+#         print("Invalid operation: Stack is empty or invalid position")
+#         return
 
-    count = 0
-    while not stack.isEmpty() and count < n - 1:
-        temp_stack.push(stack.pop())
-        count += 1
+#     count = 0
+#     while not stack.isEmpty() and count < n - 1:
+#         temp_stack.push(stack.pop())
+#         count += 1
 
-    if not stack.isEmpty():
-        stack.pop()
-    else:
-        print("Invalid operation: n is larger than the size of the stack")
-        while not temp_stack.isEmpty():
-            stack.push(temp_stack.pop())
-        return
+#     if not stack.isEmpty():
+#         stack.pop()
+#     else:
+#         print("Invalid operation: n is larger than the size of the stack")
+#         while not temp_stack.isEmpty():
+#             stack.push(temp_stack.pop())
+#         return
 
-    while not temp_stack.isEmpty():
-        stack.push(temp_stack.pop())
+#     while not temp_stack.isEmpty():
+#         stack.push(temp_stack.pop())
 
 
-print('Test 01')
-st = Stack()
-st.push(4)
-st.push(19)
-st.push(23)
-st.push(17)
-st.push(5)
-print('Stack:')
-print_stack(st)
-print('------')
-remove_block(st, 2)
-print('After Removal:')
-print_stack(st)
-print('------')
+# print('Test 01')
+# st = Stack()
+# st.push(4)
+# st.push(19)
+# st.push(23)
+# st.push(17)
+# st.push(5)
+# print('Stack:')
+# print_stack(st)
+# print('------')
+# remove_block(st, 2)
+# print('After Removal:')
+# print_stack(st)
+# print('------')
 
-print()
-print('======================================')
-print()
+# print()
+# print('======================================')
+# print()
 
 # print('Test 02')
 # st = Stack()
