@@ -171,3 +171,79 @@
 # print('======================================')
 # print()
 # hi this is no
+
+# stack = Stack()
+# string = '<<<..<......<<<<....>'
+# returned_value = diamond_count(stack, string)
+# print(f'Number of Diamonds: {returned_value}')  # Should print 1
+# print('-----------------------------------------')
+
+# print('Test 03')
+# stack = Stack()
+# string = '>>><...<<..>>...>...>>>'
+# returned_value = diamond_count(stack, string)
+# print(f'Number of Diamonds: {returned_value}')  # Should print 3
+# print('-----------------------------------------')
+
+
+# def remove_block(stack, n):
+#     temp_stack = Stack()
+
+#     if stack.isEmpty() or n <= 0:
+#         print("Invalid operation: Stack is empty or invalid position")
+#         return
+
+#     count = 0
+#     while not stack.isEmpty() and count < n - 1:
+#         temp_stack.push(stack.pop())
+#         count += 1
+
+#     if not stack.isEmpty():
+#         stack.pop()
+#     else:
+#         print("Invalid operation: n is larger than the size of the stack")
+#         while not temp_stack.isEmpty():
+#             stack.push(temp_stack.pop())
+#         return
+
+#     while not temp_stack.isEmpty():
+#         stack.push(temp_stack.pop())
+
+
+# print('Test 01')
+# st = Stack()
+# st.push(4)
+# st.push(19)
+# st.push(23)
+# st.push(17)
+# st.push(5)
+# print('Stack:')
+# print_stack(st)
+# print('------')
+# remove_block(st, 2)
+# print('After Removal:')
+# print_stack(st)
+# print('------')
+
+# print()
+# print('======================================')
+# print()
+
+# print('Test 02')
+# st = Stack()
+# st.push(73)
+# st.push(85)
+# st.push(15)
+# st.push(41)
+# print('Stack:')
+# print_stack(st)
+# print('------')
+# remove_block(st, 3)
+# print('After Removal:')
+# print_stack(st)
+# print('------')
+
+# print()
+# print('======================================')
+# print()
+# hi this is no
